@@ -24,8 +24,14 @@ param (
     [string]$OU = "OU=DefaultOU,DC=corp,DC=pcxlab,DC=com"  # Set a default OU if not supplied
 )
 
-# Define log file location
-$logFile = "C:\Logs\MoveToOU_$($env:COMPUTERNAME)_$(Get-Date -Format 'yyyyMMdd_HHmmss').log"
+# Define log folder and file location
+$logFolder = "C:\Logs"
+$logFile = "$logFolder\MoveToOU_$($env:COMPUTERNAME)_$(Get-Date -Format 'yyyyMMdd_HHmmss').log"
+
+# Ensure the log folder exists; if not, create it
+if (-not (Test-Path -Path $logFolder)) {
+    New-Item -Path $logFolder -ItemType Directory | Out-Null
+}
 
 # Function to log messages
 function Log-Message {

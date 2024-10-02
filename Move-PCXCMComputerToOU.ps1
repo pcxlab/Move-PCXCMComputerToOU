@@ -3,7 +3,7 @@
     Moves the current computer object in Active Directory (AD) to a specified Organizational Unit (OU).
 
 .DESCRIPTION
-    This script retrieves the Distinguished Name (DN) of the computer object in Active Directory
+    This script retrieves the Distinguished Name (DN) of the computer object in Active Directory (AD)
     and moves it to the OU provided as a parameter. This is useful for automating the process of 
     relocating computer objects in AD based on specified OUs.
 

@@ -15,8 +15,8 @@
     Moves the current computer to the "Workstations" OU within the "example.com" domain.
 
 .NOTES
-    Ensure that you have the necessary permissions to move objects in Active Directory and that the 
-    execution policy is set appropriately.
+    Ensure that you have the necessary permissions to move objects in Active Directory and that
+    the execution policy is set appropriately .
 
 #>
 
